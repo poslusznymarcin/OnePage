@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{   
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul ,li , a, header{
+    box-sizing: border-box;
+}
+
+/*css reset*/
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #e9e9e9;
+}
+.menu .logo{
+    margin: 20px;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px
+}
+.menu li a{
+    color:black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.home .home-button{
+    color: #5cb9b5;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+h1, h2{
+    position: absolute;
+    top: 20%;
+    left: 70%
+}
+
+p{
+    position: absolute;
+    top: 30%;
+    left: 70%
+}
+
+.home{
+    background-color: #e9e9e9;
+}
+
+.about{
+    background-color: #ffffff;
+}
+
+.work{
+    background-color: #f8f9f9;
+}
+
+.process{
+
+
+}
+
+.services{
+
+}
+
+.testimonials{
+
+}
+
+.contact{
+
+}
