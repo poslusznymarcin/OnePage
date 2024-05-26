@@ -1,91 +1,315 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{   
+
+body {
     font-size: 100%;
     font-family: sans-serif;
 }
 
-div, section, span, ul ,li , a, header{
-    box-sizing: border-box;
-}
-
-/*css reset*/
-
-header{
+header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
     background-color: #e9e9e9;
 }
-.menu .logo{
+
+.menu .logo {
     margin: 20px;
 }
 
-.menu li{
+.menu li {
     list-style: none;
     display: inline-block;
-    margin: 20px
+    margin: 20px;
 }
-.menu li a{
-    color:black;
+
+.menu li a {
+    color: black;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
 }
 
-.home .home-button{
+.home .home-button {
     color: #5cb9b5;
 }
 
-section{
+section {
     width: 100%;
-    float: left;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+section .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.home .content {
+    margin-left: auto;
+    margin-right: 10%; /* Adjust this value to position the text properly */
+    width: 40vw;
+}
+.home .content h1{
+    font-size: 30px;
+}
+.home .content p{
+    color: grey;
+}
+
+.home h1, .home p {
+    color: black;
+}
+
+.home .button-container {
+    margin-top: 20px; /* Adjust this value for spacing */
+    background-color: #5cb9b5; /* Green background */
+    padding: 10px;
+    display: inline-block;
+}
+
+.home .button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 40px;
+    display: inline-block;
+}
+
+.home .button:hover {
+    background-color: #4aa09a;
+}
+
+.about, .skills, .process, .services, .testimonials, .contact .content {
+    background-color: transparent; /* Ensure other sections have no background */
+    color: black; /* Ensure other sections have default text color */
+}
+.about .content {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    
+}
+.about{
+    height: 40vh;
+}
+
+.about .signature {
+    display: block; /* Zmienia obraz na element blokowy */
+    margin: 0 auto; /* Automatyczne ustawienie marginesów, co powoduje, że obraz jest wyśrodkowany */
+    margin-bottom: 5vh;
+}
+
+/* Style pasków postępu */
+.skill {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 30vw;
+    background-color: #f3f3f3;
+    overflow: hidden;
     position: relative;
+    height: 5px;
 }
 
-h1, h2{
+.progress-bar::after {
+    content: '';
     position: absolute;
-    top: 20%;
-    left: 70%
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #5cb9b5;
+    transition: width 0.5s ease-in-out;
 }
 
-p{
-    position: absolute;
-    top: 30%;
-    left: 70%
+/* Niestandardowy atrybut data-progress dla każdego paska postępu */
+.progress-bar[data-progress="75"]::after {
+    width: 75%;
 }
 
-.home{
+.progress-bar[data-progress="90"]::after {
+    width: 90%;
+}
+
+.progress-bar[data-progress="65"]::after {
+    width: 65%;
+}
+/* Skills Section */
+
+.skills {
+    height: 50vh; /* Set section height to 50% of the viewport height */
+}
+
+.skills-content {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Ensure it takes the full height of the parent */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.skills-text, .skills-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure it takes the full height of the parent */
+    margin: 0; /* Remove margin */
+}
+
+.skills-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    padding: 10vw;
+    text-align: left; /* Align text to the left */
+    max-width: 50vw;
+}
+
+.skills-box {
+    flex: 1;
+    background-color: #d3d3d3; /* Gray color */
+    height: 100%; /* Ensure it takes the full height of the parent */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+.work {
+    background-color: #1E90FF; /* Niebieski kolor */
+    padding: 50px 0; /* Padding dla sekcji */
+    text-align: center;
+    height: 20vh;
+}
+
+.work-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Dodaj flex-wrap dla responsywności */
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.work-logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.work-info {
+    text-align: center;
+}
+
+.work-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.work-text {
+    font-size: 16px;
+    color: white;
+}
+
+
+.home {
     background-color: #e9e9e9;
 }
 
-.about{
+.about {
     background-color: #ffffff;
 }
 
-.work{
+.skills , .process, .services, .testimonials, .contact {
     background-color: #f8f9f9;
 }
 
-.process{
-
-
+.contact {
+    text-align: center; /* Center align content */
 }
 
-.services{
-
+.contact .form-container {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.testimonials{
-
+.contact .form-header {
+    margin-bottom: 20px;
 }
 
-.contact{
+.contact .form-header h3 {
+    margin-bottom: 10px;
+}
 
+.contact .form-header p {
+    margin-bottom: 20px;
+}
+
+.contact .contact-form {
+    text-align: left; /* Left align form fields */
+}
+
+.contact .form-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Spread elements evenly */
+}
+
+.contact .form-row input[type="text"],
+.contact .form-row input[type="email"],
+.contact .form-row textarea {
+    width: 100%; /* Set width to 100% */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact .form-row textarea {
+    height: 150px;
+}
+
+.contact .form-row button {
+    background-color: #5cb9b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact .form-row button:hover {
+    background-color: #4aa09a;
 }
