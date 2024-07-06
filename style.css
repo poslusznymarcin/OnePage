@@ -7,6 +7,7 @@
 body {
     font-size: 100%;
     font-family: sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -21,14 +22,13 @@ header {
     background-color: #e9e9e9;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
 .menu .logo {
     margin: 20px;
-    
 }
 
 .menu li {
@@ -54,9 +54,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
-
 
 section .content {
     max-width: 800px;
@@ -67,23 +65,25 @@ section .content {
 
 .home .content {
     margin-left: auto;
-    margin-right: 10%; /* Adjust this value to position the text properly */
+    margin-right: 10%;
     width: 40vw;
 }
-.home .content h1{
+
+.home .content h1 {
     font-size: 30px;
 }
-.home .content p{
+
+.home p {
     color: #e9e9e9;
 }
 
-.home h1, .home p {
-    color: black;
+.content p {
+    color: #787878;
 }
 
 .home .button-container {
-    margin-top: 20px; /* Adjust this value for spacing */
-    background-color: #10c9c3; /* Green background */
+    margin-top: 20px;
+    background-color: #10c9c3;
     padding: 10px;
     display: inline-block;
 }
@@ -102,24 +102,25 @@ section .content {
 }
 
 .about, .skills, .process, .services, .testimonials, .contact .content {
-    background-color: transparent; /* Ensure other sections have no background */
-    color: black; /* Ensure other sections have default text color */
+    background-color: transparent;
+    color: black;
 }
+
 .about .content {
-    text-align: center; /* Wyśrodkowanie tekstu */
-    
+    text-align: center;
 }
-.about{
+
+.about {
     height: 40vh;
 }
 
 .about .signature {
-    display: block; /* Zmienia obraz na element blokowy */
-    margin: 0 auto; /* Automatyczne ustawienie marginesów, co powoduje, że obraz jest wyśrodkowany */
+    display: block;
+    margin: 0 auto;
     margin-bottom: 5vh;
 }
 
-/* Style pasków postępu */
+/* Skill Section */
 .skill {
     margin-bottom: 20px;
 }
@@ -143,7 +144,6 @@ section .content {
     transition: width 0.5s ease-in-out;
 }
 
-/* Niestandardowy atrybut data-progress dla każdego paska postępu */
 .progress-bar[data-progress="75"]::after {
     width: 75%;
 }
@@ -155,18 +155,17 @@ section .content {
 .progress-bar[data-progress="65"]::after {
     width: 65%;
 }
-/* Skills Section */
 
 .skills {
-    height: 50vh; /* Set section height to 50% of the viewport height */
+    height: 70vh;
 }
 
 .skills-content {
     display: flex;
     width: 100%;
-    height: 100%; /* Ensure it takes the full height of the parent */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .skills-text, .skills-box {
@@ -174,25 +173,25 @@ section .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Ensure it takes the full height of the parent */
-    margin: 0; /* Remove margin */
+    height: 100%;
+    margin: 0;
 }
 
 .skills-text {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align items to the start (left) */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 10vw;
-    text-align: left; /* Align text to the left */
-    max-width: 50vw;
+    text-align: left;
+    max-width: 50%;
 }
 
 .skills-box {
     flex: 1;
-    background-color: #d3d3d3; /* Gray color */
-    height: 100%; /* Ensure it takes the full height of the parent */
+    background-color: #d3d3d3;
+    height: 100%;
 }
 
 h1, h2 {
@@ -204,14 +203,14 @@ p {
     line-height: 1.6;
 }
 
-
 /* Work Section */
 .work {
     background-color: #10c9c3;
-    height: 20vh; /* Set section height to 50% of the viewport height */
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .work-content {
@@ -229,21 +228,29 @@ p {
 
 .work-logo {
     margin-right: 20px;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    flex-shrink: 0; /* Prevent the logo from shrinking */
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
 }
 
 .work-info {
     text-align: left;
     display: flex;
-    flex-direction: column; /* Stack the text vertically */
+    flex-direction: column;
 }
 
 .work-info p {
-    margin: 5px 0;
+    margin: 0px 0;
+    font-size: 20px;
 }
 
+.work-info .small-font{
+    font-size: 13px;
+}
+
+.work-info .bold{
+    font-weight: bold;
+}
 
 .grid-section{
     height: 50vw;
@@ -257,17 +264,17 @@ p {
 
 .load-more {
     width: 100%;
-    background-color: #f1f1f1; /* Set the background color to light grey */
+    background-color: #f5f5f5; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px; /* Adjust the height as needed */
+    height: 100px;
 }
 
 .load-more p {
-    color: #838383; /* Set the text co838383lor to grey */
-    font-size: 14px; /* Adjust the font size as needed */
-    letter-spacing: 1px; /* Add letter spacing if needed */
+    color: #838383;
+    font-size: 14px;
+    margin: 0 auto;
 }
 .square {
     width: 25vw;
@@ -282,52 +289,65 @@ p {
     background-color: #dddddd;
 }
 
+/* Video Section */
 .video-section {
+    padding: 50px 20px;
     text-align: center;
-    padding: 50px 0;
-    background-color: #f1f1f1; /* Light grey background */
-    justify-content: center; /* Center horizontally */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center vertically */
 }
 
-.video-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.video-container h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
 }
 
-.video-section p {
+.video-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
     font-size: 14px;
     color: #777;
-    margin-bottom: 20px;
-    max-width: 600px; /* Ograniczenie szerokości tekstu */
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
-.video-container {
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #00c4cc;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .play-button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
-    background-color: #00c4cc; /* Play button color */
-    border-radius: 50%;
-    text-decoration: none;
 }
 
 .play-icon {
-    font-size: 24px;
-    color: #fff;
+    font-size: 15px;
 }
-
 
 
 .home {
@@ -338,7 +358,7 @@ p {
     background-color: #ffffff;
 }
 
-.skills , .process, .services, .testimonials,{
+.skills, .process, .services, .testimonials {
     background-color: #f8f9f9;
 }
 
@@ -346,7 +366,7 @@ p {
     background-color: #f5f5f5;
     padding: 60px 20px;
     text-align: center;
-    height: 50%
+    height: 50%;
 }
 
 .services-container {
@@ -387,6 +407,7 @@ p {
     padding: 60px 20px;
     text-align: center;
     color: white;
+    height: 70vh;
 }
 
 .testimonial-container {
@@ -400,27 +421,40 @@ blockquote {
     margin: 0;
 }
 
-
 .partners {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    height: 10%;
+}
+
+.partners .partner-logo{
+    margin: 5vw;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
     padding: 20px 0;
     text-align: center;
-    height:10%;
+    height: 20%;
 }
 
-.partners-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.content-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-.partner-logo {
-    
-    margin: 0 10px;
-
-}
 
 
 .contact {
@@ -438,12 +472,13 @@ blockquote {
     margin-bottom: 20px;
 }
 
-.contact .form-header h3 {
-    margin-bottom: 10px;
+.contact .form-header h1 {
+    margin-bottom: 30px;
 }
 
 .contact .form-header p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: grey;
 }
 
 .contact .contact-form {
@@ -462,8 +497,9 @@ blockquote {
 .contact .form-row textarea {
     width: 100%; /* Set width to 100% */
     padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
     box-sizing: border-box;
+    
 }
 
 .contact .form-row textarea {
@@ -493,7 +529,8 @@ blockquote {
 footer {
     background-color: #111;
     color: #fff;
-    padding: 20px 0;
+    padding: 60px 0;
+    
 }
 
 .footer-container {
@@ -503,6 +540,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    color: #bcbcbc;
 }
 
 .footer-column {
@@ -527,11 +565,34 @@ footer {
     margin-bottom: 5px;
 }
 
-.footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
+.footer-column .column1-h3{
+    color: white;
 }
 
-.footer-column ul li a:hover {
+.footer-column .column1{
+    font-size: 12px;
+}
+
+.footer-column .column2{
+    padding-left: 40%;
+}
+
+.footer-column .column3{
+    padding-left: 100% ; 
+    
+}
+
+.footer-column .column4{
+    padding-left:  40%;
+}
+
+
+.footer-column ul li a {
+    color: #bcbcbc;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-contain ul li a:hover {
     text-decoration: underline;
 }
